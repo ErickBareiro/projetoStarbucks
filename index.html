@@ -13,7 +13,8 @@
         <div class="circle"></div>
         <header>
             <a href="#"><img src="images/logo.png" alt="logo-starbucks" class="logo"></a>
-            <ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Rewards</a></li>
                 <li><a href="#">Nosso café</a></li>
@@ -54,6 +55,13 @@
         function changeCircleColor(color){
             const circle = document.querySelector('.circle');
             circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
         }
 
     </script>
