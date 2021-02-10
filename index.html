@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks Coffee Company - Home</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="images/logo.png" alt="logo-starbucks" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Nosso café</a></li>
+                <li><a href="#">Impacto Social</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Não é só Café...<br>É <span>Starbucks</span></h2>
+                <p>Queridos clientes, partners e amigos, estamos acompanhando a situação atual do Brasil em relação ao
+                    COVID-19, focados na segurança e bem estar dos nossos partners (como chamamos os nossos
+                    colaboradores) e clientes. Seguimos os critérios de quarentena de cada munícipo que temos lojas. As
+                    lojas abertas ou com entrega via delivery, através do nosso parceiro Rappi, estão seguindo as
+                    orientações das autoridades de saúde.</p>
+                <a href="#">Leia Mais</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('var(--mainColor)')"></li>
+            <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('var(--secColor)')"></li>
+            <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('var(--tertColor)')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+    </script>
+
+</body>
+
+</html>
